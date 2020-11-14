@@ -17,17 +17,17 @@ func main() {
 		return
 	}
 	fs := interceptHandler(http.FileServer(http.Dir("./public")),Error)
-	http.Handle("/",fs)
-	fmt.Println("Starting webserver on port 3000")
-	err = http.ListenAndServe(":3000",nil)
+	fmt.Println("Starting webserver on port http://localhost:3000")
+	err = http.ListenAndServe(":3000",fs)
 	if err != nil{
 		fmt.Println("Couldn't start webserver on port 3000 counting up")
-		for i := 3000; i > 4000;i++ {
-			err = http.ListenAndServe(fmt.Sprint(":",i),nil)
-			if err != nil{
-				fmt.Println("Starting webserver on port " + strconv.Itoa(i))
-				break
+		for i := 3001; i < 4000;i++ {
+			fmt.Println("Starting webserver on port http://localhost:" + strconv.Itoa(i))
+			err = http.ListenAndServe(fmt.Sprint(":",i),fs)
+			if err != nil {
+				continue
 			}
+			break
 		}
 	}
 }

@@ -1,0 +1,50 @@
+body {
+    background: darkred;
+}
+
+.Box404 {
+    background: white;
+    position: absolute;
+    border-radius: 25px;
+    border-width: 25px;
+    border-color: gray;
+    width: 400px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.MiniBox {
+    background: darkgray;
+    position: absolute;
+    border-radius: 25px;
+    border-width: 25px;
+    border-color: gray;
+    width: 200px;
+    height: 50px;
+    top: 14%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.LargeBox {
+    background: darkgray;
+    position: absolute;
+    border-color: gray;
+    border-radius: 25px;
+    width: 400px;
+    height: 50px;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}

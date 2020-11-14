@@ -1,1 +1,3 @@
-module "github.com/Jviguy/HtmlTest"
+module github.com/Jviguy/HtmlTest
+
+go 1.14
